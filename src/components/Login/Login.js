@@ -23,6 +23,15 @@ const Login = () => {
                 <p>
                     New to ema-john? <Link className='form-link' to="/signup">Create an account</Link>
                 </p>
+                <div className='from-underline'>
+                    <div className='from-underline-div'></div>
+                     <div style={{marginTop: 0}}>Or</div> 
+                    
+                    <div className='from-underline-div'></div>
+                </div>
+                <div className='from-login-google'>
+                    <button><h1>G</h1> <p>Continue with Google </p></button>
+                </div>
             </div>
         </div>
     );
