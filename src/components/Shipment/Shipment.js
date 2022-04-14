@@ -12,7 +12,7 @@ const Shipment = () => {
     const [error, setError] = useState(' ');
     // const navigate = useNavigate();
 
-    const handleNamerBlur = event =>{
+    const handleNameBlur = event =>{
         setName(event.target.value);
     } 
         
@@ -25,6 +25,8 @@ const Shipment = () => {
 
     const  handleCreateUser = event =>{
         event.preventDefault();
+        const shipping = {name, email, address, phone,};
+        console.log(shipping);
         
     }
 
@@ -35,14 +37,14 @@ const Shipment = () => {
             <form onSubmit={handleCreateUser}>
                 <div className="input-group">
                     <label htmlFor="email">Name</label>
-                    <input onBlur={handleNamerBlur} type="text" name="name" id='name' required></input>
+                    <input onBlur={handleNameBlur} type="text" name="name" id='name' required></input>
                 </div>
                 <div className="input-group">
                     <label htmlFor="email">Email</label>
                     <input value={user?.email} readOnly type="email" name="email" id='email' required></input>
                 </div>
                 <div className="input-group">
-                    <label htmlFor="password">Address</label>
+                    <label htmlFor="address">Address</label>
                     <input onBlur={handleAddressBlur} type="text" name="address" id='address' required></input>
                 </div>
                 <div className="input-group">
